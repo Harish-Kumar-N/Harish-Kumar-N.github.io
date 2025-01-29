@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
+    
     if (currentPath === '/' || currentPath.includes('index.html')) {
         document.getElementById('home-link').classList.add('active');
     }
