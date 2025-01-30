@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.resume-left {
+    margin-right: 2em;
+    padding: 0 2em;
+    color: white;
+    background-image: linear-gradient(120deg, #155345, #159957);
+    height: 850px;
+    width: 375px;
+    flex-shrink: 0;
+}
+
+.resume-content {
+    flex-grow: 1;
+}
