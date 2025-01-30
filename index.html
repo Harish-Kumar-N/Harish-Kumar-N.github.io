@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minato07</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-</head>
-<body class="min-vh-100 bg-light">
-    <div>
-        <header class="bg-success mb-5">
-            <nav class="navbar navbar-expand-lg navbar-dark container py-2">
-                <div class="container-fluid px-lg-4">
-                    <a class="navbar-brand d-flex align-items-center" href="minato07.html">
-                        <i class="bi bi-code-slash fs-4 me-2"></i>
-                        <span class="fw-semibold">Minato07</span>
-                    </a>
-                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item mx-2">
-                                <a class="nav-link rounded-pill px-3 hover-bg-light hover-text-dark" id="home-link" href="index.html">
-                                    <i class="bi bi-house-door-fill me-1"></i>Home
-                                </a>
-                            </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link rounded-pill px-3" id="resume-link" href="resume.html">
-                                    <i class="bi bi-file-earmark-person-fill me-1"></i>Resume
-                                </a>
-                            </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link rounded-pill px-3" id="writeups-link" href="writeups.html">
-                                    <i class="bi bi-vector-pen me-1"></i>WriteUps
-                                </a>
-                            </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link rounded-pill px-3" id="articles-link" href="article.html">
-                                    <i class="bi bi-envelope-paper-fill me-1"></i>Articles
-                                </a>
-                            </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link rounded-pill px-3" id="projects-link" href="project.html">
-                                    <i class="bi bi-journal-bookmark me-1"></i>Projects
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <div class="container mt-5">
-            <p>I'm Harish Kumar, a passionate cybersecurity enthusiast on a mission to become an ethical hacker.<p>
-            <p>and Big fan of Minato Namikaze</p>
-        </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./current_page.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minato07</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-white text-black">
+  <header id="header" class="bg-white py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="logo fs-2 text-decoration-none" href="./html/minato07.html">Minato07</a>
+      <nav>
+        <a class="nav-item mx-3" href="index.html">Home</a>
+        <a class="nav-item mx-3" href="./html/resume.html">Resume</a>
+        <a class="nav-item mx-3" href="./html/writeups.html">WriteUps</a>
+        <a class="nav-item mx-3" href="./html/article.html">Article</a>
+        <a class="nav-item mx-3" href="./html/project.html">Project</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="d-flex align-items-center py-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="hero-left text-center text-md-start">
+        <h1 id="hero-title" class="display-4 mt-5"></h1>
+        <h3 class="text-primary mt-3">Cybersecurity Enthusiast & Web Developer</h3>
+        <div>
+          <p class="mt-3">aspiring ethical hacker and web developer passionate about cybersecurity</p>
+          <p class="mt-0">and secure coding. I love exploring system vulnerabilities, building efficient</p>
+          <p>web solutions, and staying ahead in the ever-evolving cyber world.</p>
+        </div>
+        <div class="cta">
+          <a class="btn button mt-3" href="./html/contact.html"><i class="fa fa-phone-square"></i> Contact Me</a>
+        </div>
+
+        <div class="social-icon mt-3">
+          <a href="#" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="hero-right mt-4 mt-md-0">
+        <img src="./images/ethical_hacker.png" alt="Hero Image" class="img-fluid rounded" style="height: 300px;">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const heroTitle = document.getElementById("hero-title");
+      const text = "Hi, I'm Harish Kumar";
+      let index = 0;
+
+      function typeLetter() {
+        if (index < text.length) {
+          heroTitle.textContent += text.charAt(index);
+          index++;
+        } else {
+          clearInterval(typingInterval);
+        }
+      }
+      const typingInterval = setInterval(typeLetter, 100); 
+    });
+  </script>
 </body>
+
 </html>
